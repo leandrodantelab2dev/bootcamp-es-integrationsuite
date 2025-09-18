@@ -41,3 +41,38 @@ Content-Type: application/json
   "to": "BRL",
   "amount": 1000
 }
+```
+
+---
+
+## 📤 Ejemplo de Respuesta
+```json
+{
+  "provider": "Frankfurter",
+  "date": "2025-09-17",
+  "base": "USD",
+  "to": "BRL",
+  "rate": 5.2981,
+  "amount": 1000,
+  "converted": 5298.10
+}
+```
+
+---
+
+## ⚙️ Tecnologías
+- **SAP Integration Suite (CPI)**
+- **Groovy Scripts**
+- **Frankfurter API**
+
+---
+
+## 🔒 Notas
+- Uso de `message.getBody(java.io.Reader)` para parsing en streaming (mejor práctica en CPI).
+- Manejo básico de errores: si la moneda no existe en la respuesta, el flujo lanza excepción.
+- Puede ampliarse con logging, métricas o integración con bases de datos.
+
+---
+
+## 📜 Licencia
+Este proyecto se publica bajo la licencia MIT. Eres libre de usarlo, modificarlo y adaptarlo según tus necesidades.
