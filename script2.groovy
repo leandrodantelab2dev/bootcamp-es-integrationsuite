@@ -28,7 +28,7 @@ Message processData(Message message) {
         if (r == null) {
             // ❌ Si no existe la tasa para 'to', lanzamos error para que el iFlow lo capture
             throw new RuntimeException("No se encontró tasa para ${to}. Respuesta: ${JsonOutput.toJson(json)}")
-    
+        }
         // ⚠️ Convertimos a BigDecimal para precisión en cálculos monetarios
         rate = new BigDecimal(r.toString())
     }
